@@ -1,0 +1,1 @@
+powershell  -nop -ep bypass -c "$t = New-Object Net.Sockets.TcpClient;try{$t.Connect("""kms.lolico.moe""", 1688)}catch{};$t.Connected"

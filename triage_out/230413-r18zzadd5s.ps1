@@ -1,0 +1,1 @@
+rundll32.exe C:\windows\System32\shell32.dll,SHCreateLocalServerRunDll {9aa46009-3ce0-458a-a354-715610a075e6} -Embedding

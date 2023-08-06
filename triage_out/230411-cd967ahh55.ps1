@@ -1,0 +1,1 @@
+rundll32.exe C:\WINDOWS\system32\davclnt.dll,DavSetCookie WEBPAGE http://webpage/WEBPAGES/creativeways/Millionaire/bgmusic.wav

